@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/MonetDB/npm-monetdb-schema-revision.svg)](https://travis-ci.org/MonetDB/npm-monetdb-schema-revision)
+[![npm version](https://badge.fury.io/js/monetdb-schema-revision.svg)](https://badge.fury.io/js/monetdb-schema-revision)
+[![Dependency Status](https://david-dm.org/MonetDB/npm-monetdb-schema-revision.svg)](https://david-dm.org/MonetDB/npm-monetdb-schema-revision)
+
 # MonetDB Schema Revision
 This module offers a single function that, given:
 - a MonetDB connection
