@@ -1,0 +1,5 @@
+INSERT INTO a VALUES (1, 'FOO', 1.2, 42);
+
+CREATE TABLE c (
+    a STRING
+);

@@ -1,0 +1,33 @@
+{
+  "name": "monetdb-schema-revision",
+  "version": "1.0.0",
+  "description": "Functionality for applying SQL delta files to a possibly existing database schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "`npm bin`/mocha Tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MonetDB/npm-monetdb-schema-revision.git"
+  },
+  "keywords": [
+    "MonetDB",
+    "Schema",
+    "Updates"
+  ],
+  "author": "Robin Cijvat <robin.cijvat@monetdbsolutions.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/MonetDB/npm-monetdb-schema-revision/issues"
+  },
+  "homepage": "https://github.com/MonetDB/npm-monetdb-schema-revision#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "chai-as-promised": "^5.1.0",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "q": "^1.4.1",
+    "monetdb": "^1.1.0"
+  }
+}
