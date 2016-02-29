@@ -3,11 +3,19 @@ var path = require("path");
 var fs = require("fs");
 
 var Q = require("q");
-var MDB = require("monetdb")();
 
 module.exports = function(dbOptions, testing) {
-    var conn = new MDB(dbOptions);
-    var connPromise = conn.connect();
+    var conn, connPromise;
+
+    if(dbOptions.conn) {
+        conn = dbOptions.conn;
+        connPromise = Q.when(true);
+    } else {
+        var MDB = require("monetdb")();
+        conn = new MDB(dbOptions);
+        connPromise = conn.connect();
+    }
+
 
     function _getSchemaName() {
         return dbOptions.defaultSchema || "sys";
