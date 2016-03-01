@@ -23,12 +23,12 @@ module.exports = function(dbOptions, testing) {
 
     function _tableExists(table) {
         return conn.query(
-            "SELECT COUNT(*)\n" +
+            "SELECT schemas.name, tables.name\n" +
             "FROM sys.schemas JOIN sys.tables ON schemas.id = tables.schema_id\n" +
             "WHERE schemas.name = ? AND tables.name = ?",
             [_getSchemaName(), table]
         ).then(function(result) {
-            return result.data[0][0] > 0;
+            return result.rows > 0;
         });
     }
 
@@ -43,7 +43,7 @@ module.exports = function(dbOptions, testing) {
             if(!tExists) {
                 return -1;
             }
-            return conn.query("SELECT cur_rev FROM " + revTable).then(function(result) {
+            return conn.query("SELECT cur_rev FROM " + revTable, false).then(function(result) {
                 return result.rows ? result.data[0][0] : -1;
             });
         });

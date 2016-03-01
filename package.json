@@ -1,6 +1,6 @@
 {
   "name": "monetdb-schema-revision",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Functionality for applying SQL delta files to a possibly existing database schema",
   "main": "index.js",
   "scripts": {
